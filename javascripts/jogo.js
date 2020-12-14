@@ -85,9 +85,9 @@ $(document).ready(function(){
           }, 500)
           //Mostra feedback de pontuação
           var feedbackPontuacao = $(this).find('.feedback-pontuacao');
-          feedbackPontuacao.addClass('incorreta animate__animated animate__headShake animate__delay-2s');
+          feedbackPontuacao.addClass('incorreta animate__animated animate__headShake animate__delay-1s');
           feedbackPontuacao.one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            feedbackPontuacao.removeClass('incorreta animate__animated animate__headShake animate__delay-2s');
+            feedbackPontuacao.removeClass('incorreta animate__animated animate__headShake animate__delay-1s');
           });
           // Atualiza pontuação
           pontos--;

@@ -206,7 +206,7 @@ main {
   padding: 9vw;
   z-index: 2;
   background-color: var(--creme-verde);
-  background-image: url('../v1.0/assets/padrao-carta.svg'),  url('../v1.0/assets/padrao-carta-i.svg');
+  background-image: url('../assets/padrao-carta.svg'),  url('../assets/padrao-carta-i.svg');
   background-position: left 3vw center, right 3vw center;
   background-repeat: no-repeat;
   background-size: auto 90%;
@@ -561,7 +561,7 @@ main {
     width: 10rem;
     height: 10rem;
     margin: 0 auto;
-    background-image: url('../v1.0/assets/frame-pontuacao.svg');
+    background-image: url('../assets/frame-pontuacao.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -635,13 +635,13 @@ main {
     padding: 1rem;
     display: block;
     cursor: pointer;
-    background-image: url("../v1.0/assets/btn-lg.svg");
+    background-image: url("../assets/btn-lg.svg");
     width: 15em;
     height: 3.8em;
     margin-left: auto;
   }
   .btn-replay:hover {
-    background-image: url("../v1.0/assets/btn-lg-hover.svg"), url("../v1.0/assets/btn-lg.svg");;
+    background-image: url("../assets/btn-lg-hover.svg"), url("../assets/btn-lg.svg");;
     text-decoration: underline;
   }
 
