@@ -1,0 +1,147 @@
+[
+  {
+    "categoria": "diagnostica",
+    "items": [
+      {
+        "conteudo": "Visa conhecer as expectativas do aprendiz em relação ao curso/disciplina e o contexto sociocultural do qual ele faz parte."
+      },
+      {
+        "conteudo": "Recolhe um conjunto de informações relevantes sobre o que o aprendiz já sabe (seu saber prévio) a respeito do conteúdo."
+      },
+      {
+        "conteudo": "Reúne informações que servirão como ponto de partida para contribuir com a organização de conteúdos e atividades a serem desenvolvidas."
+      },
+      {
+        "conteudo": "Pautada na perspectiva construtivista, é realizada durante o processo educativo, visando promover ações que atendam às necessidades individuais e coletivas de um grupo de alunos."
+      },
+      {
+        "conteudo": "Seus resultados podem oferecer condições para a implementação ou consolidação da coparticipação no (re)planejamento de ações e estratégias de ensino e de aprendizagem."
+      },
+      {
+        "conteudo": "Alinha-se ao movimento crítico do currículo segundo o qual o aluno é concebido como sujeito responsável pela transformação e democratização da sociedade em que vive."
+      },
+      {
+        "conteudo": "Pode desencadear o (re)planejamento de ações a favor da construção do conhecimento de forma coparticipativa e corresponsável."
+      },
+      {
+        "conteudo": "Seus resultados podem subsidiar a construção e a negociação dos indicadores quantitativos e qualitativos a serem considerados no planejamento e desenvolvimento das atividades e suas finalidades."
+      }
+    ]
+  },
+  {
+    "categoria": "formativa",
+    "items": [
+      {
+        "conteudo": "Inscreve o aluno como corresponsável pelo percurso teórico-metodológico da construção do conhecimento."
+      },
+      {
+        "conteudo": "Implementa um conjunto de atividades múltiplas que permitem acompanhar todo o processo educativo e sua evolução."
+      },
+      {
+        "conteudo": "Promover a melhoria da aprendizagem e da própria prática avaliativa, diluindo-a no fluxo do trabalho cotidiano."
+      },
+      {
+        "conteudo": "Pauta-se numa perspectiva pedagógica em que a construção do conhecimento se dá a partir da proposição de situações-problema com percursos individualizados."
+      },
+      {
+        "conteudo": "Orienta o professor a acompanhar mais metodicamente os alunos e o processo de aprendizagem de cada um, de forma interativa e constante, o que lhe permite ajustar suas intervenções pedagógicas."
+      },
+      {
+        "conteudo": "Seus resultados impactam a otimização da aprendizagem e o desenvolvimento de competências."
+      },
+      {
+        "conteudo": "Advoga em favor do estabelecimento coparticipativo e da explicitação dos critérios de avaliação, promovendo a construção dialética do conhecimento."
+      },
+      {
+        "conteudo": "Fundamenta-se no princípio de que avaliar é conhecer, contrastar, dialogar, indagar, argumentar, deliberar, raciocinar, aprender, ou seja, construir o conhecimento por vias heurísticas de descobertas."
+      }
+    ]
+  },
+  {
+    "categoria": "somativa",
+    "items": [
+      {
+        "conteudo": "Pode-se dar como um processo certificador e aplica o princípio cumulativo dos conteúdos."
+      },
+      {
+        "conteudo": "É geralmente confiada aos professores, à luz dos interesses institucionais e de uma exigência estabelecida pelo sistema educacional e, em certa medida, do mercado de trabalho."
+      },
+      {
+        "conteudo": "Refere-se ao processo de verificação dos diferentes níveis de aprendizagem alcançados por cada aluno, por isso, seu formato dominante é o de atividade final de disciplina, curso ou programa."
+      },
+      {
+        "conteudo": "Objetiva certificar o aluno em uma área específica do conhecimento ou se ele exercerá uma determinada função profissional."
+      },
+      {
+        "conteudo": "Funciona como um modo de regulação da divisão vertical do trabalho pedagógico, inscrevendo a avaliação da aprendizagem na metáfora do \"acerto de contas\"."
+      },
+      {
+        "conteudo": "Busca uma medida objetiva em relação à formação do aluno, comparando os objetivos planejados e os resultados alcançados com base em um modelo ideal, construído com base em um modelo social dominante."
+      },
+      {
+        "conteudo": "Converte políticas e práticas de avaliação voltadas para a classificação e seleção, justificadas por um processo de certificação em função da necessidade da lógica de mercado."
+      },
+      {
+        "conteudo": "Tem como principal desafio garantir a todos os alunos ‘igualdade de partida’ e ‘oportunidades reais’ para que revelem as suas capacidades."
+      }
+    ]
+  },
+  {
+    "categoria": "autoavaliacao",
+    "items": [
+      {
+        "conteudo": "Integra o processo de avaliação da aprendizagem ao considerar como o aluno percebe e se posiciona sobre suas ações e condutas."
+      },
+      {
+        "conteudo": "O parâmetro de avaliação é alcançado por meio da comparação com critérios previamente negociados."
+      },
+      {
+        "conteudo": "Ocorre ao longo do processo e requer do aluno reflexão, análise e construção de um modelo referencial com o qual ele percebe e se posiciona sobre sua progressão e/ou desempenho."
+      },
+      {
+        "conteudo": "É um mecanismo constitutivo e regulador da própria ação do aluno sobre o processo de sua aprendizagem, permitindo-lhe avaliar se há condições para explorar mais recursos e conhecimentos."
+      },
+      {
+        "conteudo": "Funciona como um diálogo interno alimentado pela linguagem e pela perspectiva de um outro, ampliando a compreensão da importância do próprio engajamento no processo de aprendizagem."
+      },
+      {
+        "conteudo": "Amplia a leitura crítica sobre os diferentes aspectos e momentos que marcam o processo singular da aprendizagem, potencializando cada vez mais a (auto)regulação de sua aprendizagem."
+      },
+      {
+        "conteudo": "Identifica o aluno à posição de corresponsável pelo processo de regulação de suas aprendizagens no próprio percurso da ação."
+      },
+      {
+        "conteudo": "O aluno parte de um modelo ideal ou de um sistema de normas para estabelecer um mapa de estudos ou uma lista de verificação potencializando o autocontrole de suas ações."
+      }
+    ]
+  },
+  {
+    "categoria": "feedback",
+    "items": [
+      {
+        "conteudo": "Visa à retroalimentação dos processos de ensino-aprendizagem e da própria avaliação ao incorporar a dimensão da negociação comunicativa, interativa e constante sobre o desempenho."
+      },
+      {
+        "conteudo": "Requer a produção de informações significativas que possam favorecer a tomada de decisões que se revertam em melhoria da construção do conhecimento e em aprimoramento das práticas avaliativas e do processo de gestão participativa da avaliação."
+      },
+      {
+        "conteudo": "Envolve informações quantitativas e qualitativas, vinculadas a critérios previamente definidos e pactuados entre avaliadores e avaliados, levando em consideração o contexto sociocultural e os diferentes estilos de aprendizagem."
+      },
+      {
+        "conteudo": "Materializa-se sob diferentes formatos: indicadores numéricos e comentários sobre o que poderia melhorar; sugestões de leituras complementares; ampliação de prazos de entrega; possibilidade para refazer a atividade etc."
+      },
+      {
+        "conteudo": "Exige do professor disponibilidade de tempo para ler e apreciar todas as atividades dos alunos e suas contribuições nas discussões coletivas, ou seja, acompanhar todo o processo de construção das atividades individuais e coletivas."
+      },
+      {
+        "conteudo": "Requer atenção quanto à quantidade de aluno por turma e ao número de atividades semanalmente: número excessivo de aluno e sobrecarga de atividades podem comprometer sua qualidade e eficiência."
+      },
+      {
+        "conteudo": "Requer avaliação sobre quando e como, ao longo do processo de aprendizagem, informações sobre desempenho do aluno são comunicadas (e-mail pessoal, mensagem privada no AVA, mensagem coletiva ou para grupos ou no fórum etc.)."
+      },
+      {
+        "conteudo": "Seu protocolo fundamental é assim descrito: \"é indispensável que o comentário da atividade anterior não ultrapasse a finalização da atividade seguinte\"."
+      }
+    ]
+  }
+]

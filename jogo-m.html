@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+    content="Vamos conhecer as lógicas que pautam as práticas avaliativas utilizadas na avaliação da aprendizagem no ensino superior. Quais práticas apoiam o aprimoramento da aprendizagem e sua emancipação? Quais promovem a certificação da aprendizagem, estabelecendo hierarquias de excelência? Neste jogo associativo, você ampliará seu conhecimento sobre os tipos de avaliação mais utilizados para a construção do processo de avaliação das aprendizagens: avaliação inicial ou diagnóstica; avaliação formativa; avaliação final ou somativa; autoavaliação e feedback (cf. PERRENOUD, 1999a; AFONSO, 2001; ÁLVAREZ MÉNDEZ, 2002; GARCIA, 2013).">
+
+  <title>Univesp | Paradigmas da Avaliação da Aprendizagem</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon" />
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700|Open+Sans:400,400i,700,700i" rel="stylesheet"> -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+
+  <!-- Animate CSS modificado -->
+  <link rel="stylesheet" href="stylesheets/animate-4-1-1.css">
+  <!-- OWL Carousel -->
+  <!-- <link rel="stylesheet" href="stylesheets/owl.carousel.min.css">
+  <link rel="stylesheet" href="stylesheets/owl.theme.default.min.css"> -->
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/slick.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/slick-theme.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/mobile.css">
+  <!-- <link rel="stylesheet" href="stylesheets/escondidos.css"> -->
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+
+    <!-- JOGO -->
+    <div class="jogo">
+      <!-- Pontuação -->
+      <div class="header">
+        <!-- <a href="index.html" class="">Página inicial</a> -->
+        <div class="placar">
+          <h3>Pontuação:</h3>
+          <div id="pontuacao">
+          </div>
+        </div>
+        <button type="button" class="btn-reiniciar">Reiniciar</button>
+      </div>
+
+      <!-- Cartas -->
+      <div class="jogo-body">
+
+        <!-- Instruções -->
+        <div class="instrucoes-gerais">
+          <h3>Instruções</h3>
+          <p>
+            A cada rodada, são abertas <strong>5 cartas</strong> com características dos paradigmas da avaliação da aprendizagem.
+          </p>
+          <p>
+            <strong>Relacione cada carta com o paradigma correspondente para marcar pontos!</strong>
+          </p>
+          <p>
+            Você pode abrir novas cartas a qualquer momento. As cartas não respondidas voltam para o banco.
+          </p>
+          <p>
+            Para ver as cartas já relacionadas, utilize o botão <strong>Ver respondidas</strong>.
+          </p>
+          <p>
+            Clique em <strong>Sacar cartas</strong> para iniciar.
+          </p>
+        </div>
+
+        <!-- Feedback pontuação -->
+        <div class="feedback-pontuacao"></div>
+
+        <!-- Itens para classificação -->
+        <div id="cartas">
+          <div class='instrucoes'>
+            <p>
+              <strong>Arraste</strong> para os lados para ver as demais cartas.
+            </p>
+            <p>
+              <strong>Clique</strong> sobre uma carta para classificá-la.
+            </p>
+          </div>
+          <!-- <div class="slider-container">
+            <div class="carta carta-item aberta" data-valor="diagnostica" data-ordem="1" style="order: 1">
+              <div>
+                Busca uma medida objetiva em relação à formação do aluno, comparando os objetivos planejados e os resultados alcançados com base em um modelo ideal, construído com base em um modelo social dominante.
+              </div>
+            </div>
+            <div class="carta carta-item aberta textao" data-valor="formativa" data-ordem="2" style="order: 2">
+              <div>
+                Requer a produção de informações significativas que possam favorecer a tomada de decisões que se revertam em melhoria da construção do conhecimento e em aprimoramento das práticas avaliativas e do processo de gestão participativa da
+                avaliação.
+              </div>
+            </div>
+            <div class="carta carta-item aberta textao" data-valor="somativa" data-ordem="3" style="order: 3">
+              <div>
+                Requer a produção de informações significativas que possam favorecer a tomada de decisões que se revertam em melhoria da construção do conhecimento e em aprimoramento das práticas avaliativas e do processo de gestão participativa da
+                avaliação.
+              </div>
+            </div>
+            <div class="carta carta-item aberta textao" data-valor="autoavaliacao" data-ordem="4" style="order: 4">
+              <div>
+                4 Autoavaliação
+              </div>
+            </div>
+            <div class="carta carta-item aberta textao" data-valor="feedback" data-ordem="5" style="order: 5">
+              <div>
+                5 Feedback
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+
+        <!-- <div class="slick-carousel" id="cartas"></div> -->
+        <div id="cartas-banco">
+        </div>
+
+
+        <!-- <div class="itens" id="cartas">
+          </div> -->
+      </div>
+
+
+      <div class="opcoes">
+        <button type="button" class="ver-respondidas">
+          Ver respondidas
+        </button>
+        <!-- <button type="button" class="classificar">Classificar</button> -->
+        <button type="button" class="sacar-cartas inicio"><div>Sacar cartas</div><div>Banco: <span id="cartas-restantes">10</span></div></button>
+      </div>
+
+      <div class="classificacao">
+        <div>
+          <button type="button" class="btn-categoria" data-categoria="diagnostica">
+            <div>
+              Aval. Inicial ou Diagnóstica
+            </div>
+            <div class="qtd-respondidas">
+              <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+            </div>
+          </button>
+          <button type="button" class="btn-categoria" data-categoria="formativa">
+            <div>
+              Aval. Formativa
+            </div>
+            <div class="qtd-respondidas">
+              <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+            </div>
+          </button>
+          <button type="button" class="btn-categoria" data-categoria="somativa">
+            <div>
+              Aval. Final ou Somativa
+            </div>
+            <div class="qtd-respondidas">
+              <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+            </div>
+          </button>
+          <button type="button" class="btn-categoria" data-categoria="autoavaliacao">
+            <div>
+              Autoavaliação
+            </div>
+            <div class="qtd-respondidas">
+              <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+            </div>
+          </button>
+          <button type="button" class="btn-categoria" data-categoria="feedback">
+            <div>
+              Feedback
+            </div>
+            <div class="qtd-respondidas">
+              <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+            </div>
+          </button>
+          <button type="button" class="cancelar">
+            <div>
+              Cancelar
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- PAINEL CARTAS RESPONDIDAS -->
+      <div class="painel-wrapper" id="painel-wrapper">
+        <button type="button" class="fecha-btn"><span class="material-icons">close</span></button>
+        <!-- <button type="button" class="menu-btn"><span class="material-icons">list</span></button> -->
+        <div class="aviso-painel">
+
+            <p>Arraste para os lados para alternar entre categorias.</p>
+            <p>Toque sobre o título da categoria para navegar por lista.</p>
+
+          <button type="button" class='fecha-aviso'>Entendi</button>
+        </div>
+        <div class="menu-painel">
+          <div class="menu-container">
+            <button type="button" class="fecha-menu-btn"><span class="material-icons">close</span></button>
+            <button type="button" class="cat-btn" data-painel="diagnostica">
+              <div class="cat-title">
+                Avaliação Inicial ou Diagnóstica
+              </div>
+              <div class="cat-qtd">
+                <div>
+                  <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="cat-btn" data-painel="formativa">
+              <div class="cat-title">
+                Avaliação Formativa
+              </div>
+              <div class="cat-qtd">
+                <div>
+                  <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="cat-btn" data-painel="somativa">
+              <div class="cat-title">
+                Avaliação Final ou Somativa
+              </div>
+              <div class="cat-qtd">
+                <div>
+                  <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="cat-btn" data-painel="autoavaliacao">
+              <div class="cat-title">
+                Autoavaliação
+              </div>
+              <div class="cat-qtd">
+                <div>
+                  <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="cat-btn" data-painel="feedback">
+              <div class="cat-title">
+                Feedback
+              </div>
+              <div class="cat-qtd">
+                <div>
+                  <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="painel-container">
+          <div class="painel" data-painel="diagnostica">
+            <div class="painel-categoria">
+              <h4>Avaliação Inicial ou Diagnóstica</h4>
+              <div class="painel-qtd">
+                <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+              </div>
+            </div>
+              <div class="painel-respondidas">
+                <div class="carta carta-item placeholder"><div>?</div></div>
+
+                <!-- <div class="carta carta-item aberta" data-valor="diagnostica" data-ordem="1" style="order: 1">
+                  <div>
+                    Busca uma medida objetiva em relação à formação do aluno, comparando os objetivos planejados e os resultados alcançados com base em um modelo ideal, construído com base em um modelo social dominante.
+                  </div>
+                </div>
+                <div class="carta carta-item aberta" data-valor="diagnostica" data-ordem="1" style="order: 1">
+                  <div>
+                    Busca uma medida objetiva em relação à formação do aluno, comparando os objetivos planejados e os resultados alcançados com base em um modelo ideal, construído com base em um modelo social dominante.
+                  </div>
+                </div>
+                <div class="carta carta-item aberta" data-valor="diagnostica" data-ordem="1" style="order: 1">
+                  <div>
+                    Busca uma medida objetiva em relação à formação do aluno, comparando os objetivos planejados e os resultados alcançados com base em um modelo ideal, construído com base em um modelo social dominante.
+                  </div>
+                </div> -->
+
+              </div>
+
+          </div>
+
+          <!-- Painel Avaliação Formativa -->
+          <div class="painel" data-painel="formativa">
+            <div class="painel-categoria">
+              <h4>Avaliação Formativa</h4>
+              <div class="painel-qtd">
+                <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+              </div>
+            </div>
+              <div class="painel-respondidas">
+                <div class="carta carta-item placeholder"><div>?</div></div>
+              </div>
+          </div>
+
+          <!-- Painel Avaliação Somativa -->
+          <div class="painel" data-painel="somativa">
+            <div class="painel-categoria">
+              <h4>Avaliação Final ou Somativa</h4>
+              <div class="painel-qtd">
+                <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+              </div>
+            </div>
+            <div class="painel-respondidas">
+              <div class="carta carta-item placeholder"><div>?</div></div>
+            </div>
+          </div>
+
+          <!-- Painel Autoavaliação -->
+          <div class="painel" data-painel="autoavaliacao">
+            <div class="painel-categoria">
+              <h4>Autoavaliação</h4>
+              <div class="painel-qtd">
+                <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+              </div>
+            </div>
+            <div class="painel-respondidas">
+              <div class="carta carta-item placeholder"><div>?</div></div>
+            </div>
+          </div>
+
+          <!-- Painel Feedback -->
+          <div class="painel" data-painel="feedback">
+            <div class="painel-categoria">
+              <h4>Feedback</h4>
+              <div class="painel-qtd">
+                <span class="qtd-cartas-respondidas">0</span>/<span class="qtd-cartas-total">8</span>
+              </div>
+            </div>
+            <div class="painel-respondidas">
+              <div class="carta carta-item placeholder"><div>?</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div class="feedback">
+      <div class="container">
+        <div class="placar-final">
+          <span id="score-final"></span> pontos
+        </div>
+        <div class="feedback-final">
+          <div>
+            <div id="feedbackConteudo"></div>
+            <div class="compartilhamento">
+              Quer indicar esse jogo? Clique nos ícones para compartilhá-lo:
+              <div class="sharing"></div>
+            </div>
+          </div>
+          <!-- <div class="frame-feedback">
+            <img src="assets/frame-feedback-l.svg" />
+            <img src="assets/frame-feedback-c.svg" />
+            <img src="assets/frame-feedback-r.svg" />
+          </div> -->
+        </div>
+        <button class="btn-replay">Jogar novamente</button>
+        <!-- <a href="index.html" class="btn-replay">Jogar novamente</a> -->
+
+      </div>
+    </div>
+
+  </main>
+
+
+
+
+  <!-- RODAPÉ -->
+  <!--//////////////////////////////////////////////////////
+  Classes prontas p/ footer (podem ser combinadas):
+  padrão => texto e contornos em cinza
+  class = "black" => texto e contornos em preto
+  class = "negativo" => texto e contornos em branco, sobre fundo escuro
+  class = "transparente" => fundo transparente (necessário ajustar cor dos ícones de compartilhamento nos círculos, para bater com a cor de fundo)
+  /////////////////////////////////////////////////////////-->
+  <!-- <footer class="black"> -->
+  <!-- <footer class="negativo"> -->
+  <!-- <footer class="transparente"> -->
+  <!-- <footer class="transparente black"> -->
+  <!-- <footer class="transparente negativo"> -->
+  <footer>
+    <div class="container d-flex justify-content-between ">
+
+      <div class="cred-rea">
+        <!-- Comente em caso de adaptação do REA -->
+        <div>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
+          Você pode utilizá-lo, compartilhá-lo e modificá-lo.</div>
+        <div><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></div>
+        <div><a href="#" target="_blank" aria-label="GitHub" style="white-space:nowrap;">GitHub <i class="fab fa-github"></i></a></div>
+        <div>Compartilhe: <div class="sharing"></div>
+        </div>
+
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+      <!-- FORMULÁRIOS DE AVALIAÇÃO -->
+      <div class="aval-rea d-flex">
+        <!-- AVALIAR RECURSO -->
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdzNOtfkB_2C6RK_Mdk8C84mFotD9Ug0nE0TxPztfPrUshSmA/viewform?usp=pp_url&entry.542052009=Nome+do+Recurso" target="_blank">Avaliar este recurso</a>
+        <!-- REPORTAR ERRO -->
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdwGrx-Z44kZ4Nfnt320DOvJT8KkbMzQIt5C9kbH-rGtC8U4w/viewform?usp=pp_url&entry.1523910789=Nome+do+Recurso" target="_blank">Reportar erro</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Docentes responsáveis</span>Mônica Cristina Garbin, Eduardo Alves Rodrigues, Roberta Flaborea Favaro, Stella Lobo</p>
+          <p><span class="funcao">Coordenação</span>Édison Trombeta</p>
+          <p><span class="funcao">Roteirização</span>Eduardo Alves Rodrigues</p>
+          <p><span class="funcao">Design Instrucional</span>Natália de Oliveira Fernandes</p>
+          <p><span class="funcao">Layout e ilustração</span>Natasha Higa</p>
+          <p><span class="funcao">Programação</span>William Kimura</p>
+          <!-- <p><span class="funcao">Revisão</span>Fulano de Tal, Ciclano de Tal</p> -->
+
+        </div>
+        <div class="modal-footer">
+          <p>Outubro/2020</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <!-- OWL Carousel -->
+  <!-- <script src="javascripts/owl.carousel.js"></script> -->
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="javascripts/slick.min.js"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [{
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="javascripts/jogo-m.js"></script>
+
+  <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>
